@@ -18,7 +18,7 @@ public class CurrencyController {
     }
 
     @PostMapping
-    public ResponseEntity<?> addCurrency(){
+    public ResponseEntity<?> addCurrency(@PathVariable int id){
         return ResponseEntity.ok("OK");
     }
 
