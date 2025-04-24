@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: Alexey Musatov
+      changes:
+        - createTable:
+            tableName: currency
+            columns:
+              - column:
+                  name: id
+                  type: UUID
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+              - column:
+                  name: base_currency
+                  type: VARCHAR(10)
+              - column:
+                  name: price_change_range
+                  type: VARCHAR(50)
+              - column:
+                  name: description
+                  type: TEXT
